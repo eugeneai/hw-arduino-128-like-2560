@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/eugeneai/projects/hard/hw-atmega128-like256/arduino/arduino.sch)
-    (date "Пн 04 фев 2019 02:07:36")
+    (date "Пн 04 фев 2019 09:02:55")
     (tool "Eeschema 5.0.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -429,7 +429,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5CD5324C))
     (comp (ref U4)
-      (value CC56-12CGKWA)
+      (value MT30361)
       (footprint LOCAL:7Segment-3-12.7x10.16)
       (datasheet "http://www.kingbright.com/attachments/file/psearch/000/00/00/CC56-12CGKWA(Ver.8A).pdf")
       (libsource (lib Display_Character) (part CC56-12CGKWA) (description "4 digit 7 segment green LED, common cathode"))
