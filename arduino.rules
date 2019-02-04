@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 29772)
+    (start_pass_no 1167)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -77,7 +77,7 @@
     scl NECTRLV "Net-(JP4-Pad1)" "Net-(JP5-Pad1)" "gate_cmd" npen NENTRIG NEOUT
     NENRST NETHR NEDIS "Net-(U2-Pad3)" "Net-(J1-Pad3)" "Net-(J1-Pad2)" "Net-(J10-Pad4)" "Net-(J10-Pad3)"
     "Net-(J10-Pad2)" "Net-(J10-Pad1)" EECS "Net-(J15-Pad2)" "Net-(J15-Pad3)" "Net-(J15-Pad4)" rxd aref
-    usbvbus
+    usbvbus "Net-(D7-Pad2)" "Net-(JP7-Pad2)" "Net-(Q2-Pad2)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

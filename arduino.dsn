@@ -1,4 +1,4 @@
-(pcb "/home/eugeneai/projects/hard/hw-atmega128-like256/arduino/arduino.dsn"
+(pcb /home/eugeneai/projects/hw/ard/arduino.dsn
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -98,6 +98,7 @@
       (place R9 74930 -125730 front 0 (PN 10k))
       (place R11 66040 -107950 front 90 (PN 10k))
       (place R12 62230 -109220 front 180 (PN 1k))
+      (place R15 113030 -109220 front 90 (PN 1k))
     )
     (component Capacitor_THT:CP_Radial_D6.3mm_P2.50mm
       (place C8 62230 -129540 front 270 (PN 47u))
@@ -142,6 +143,7 @@
     (component Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
       (place JP2 121920 -109220 front 270 (PN CTLR))
       (place JP6 69850 -114300 front 90 (PN Jumper))
+      (place JP8 124460 -120650 front 270 (PN RELAY))
     )
     (component "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
       (place JP3 64770 -114300 front 270 (PN Jumper))
@@ -149,6 +151,7 @@
     (component Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical::1
       (place JP4 109220 -100330 front 90 (PN Jumper))
       (place JP5 101600 -120650 front 270 (PN JOP))
+      (place JP7 114300 -105410 front 270 (PN NPN))
     )
     (component Inductor_THT:L_Axial_L7.0mm_D3.3mm_P5.08mm_Vertical_Fastron_MICC
       (place L1 102870 -101600 front 180 (PN L))
@@ -200,12 +203,16 @@
     )
     (component Diode_SMD:D_MicroMELF_Hadsoldering
       (place D5 116840 -120650 front 180 (PN 4148))
+      (place D7 123190 -121920 front 180 (PN 4148))
     )
     (component "LOCAL:7Segment-3-12.7x10.16"
-      (place U4 119380 -130810 front 0 (PN "CC56-12CGKWA"))
+      (place U4 119380 -130810 front 0 (PN MT30361))
     )
     (component "Connector_USB:USB_Micro-B_Wuerth_629105150521_CircularHoles"
       (place J18 44450 -92710 front 180 (PN USB_B_Micro))
+    )
+    (component "Package_TO_SOT_THT:TO-92"
+      (place Q2 113030 -113030 front 0 (PN 2N3903))
     )
   )
   (library
@@ -1379,6 +1386,22 @@
       (keepout "" (circle F.Cu 800 2500 800))
       (keepout "" (circle B.Cu 800 2500 800))
     )
+    (image "Package_TO_SOT_THT:TO-92"
+      (outline (path signal 120  -530 -1850  3070 -1850))
+      (outline (path signal 100  -500 -1750  3000 -1750))
+      (outline (path signal 50  -1460 2730  4000 2730))
+      (outline (path signal 50  -1460 2730  -1460 -2010))
+      (outline (path signal 50  4000 -2010  4000 2730))
+      (outline (path signal 50  4000 -2010  -1460 -2010))
+      (pin Round[A]Pad_1300_um (rotate 90) 2 1270 1270)
+      (pin Round[A]Pad_1300_um (rotate 90) 3 2540 0)
+      (pin Rect[A]Pad_1300x1300_um (rotate 90) 1 0 0)
+    )
+    (padstack Round[A]Pad_1300_um
+      (shape (circle F.Cu 1300))
+      (shape (circle B.Cu 1300))
+      (attach off)
+    )
     (padstack Round[A]Pad_1500_um
       (shape (circle F.Cu 1500))
       (shape (circle B.Cu 1500))
@@ -1532,6 +1555,11 @@
       (shape (rect F.Cu -450 -400 450 400))
       (attach off)
     )
+    (padstack Rect[A]Pad_1300x1300_um
+      (shape (rect F.Cu -650 -650 650 650))
+      (shape (rect B.Cu -650 -650 650 650))
+      (attach off)
+    )
     (padstack Rect[T]Pad_1500x550_um
       (shape (rect F.Cu -750 -275 750 275))
       (attach off)
@@ -1573,14 +1601,14 @@
         C15-1 C16-1 C17-1 C18-1 C19-1 D4-1 J4-2 J4-3 J5-2 J6-8 J7-8 J17-7 J17-6 R2-2
         U1-1 U3-7 U3-18 U3-21 U3-25 U3-26 U5-1 U6-22 U6-53 U6-63 J1-4 J1-5 J1-5@1
         J16-4 J16-6 J16-8 J16-10 J2-5 J2-6 J2-7 J2-8 J2-12 SW1-2 SW1-2@1 SW2-2 SW2-2@1
-        SW3-2 SW3-2@1 U7-5 U2-4 J18-5 J18-6 J18-6@1 J18-6@2 J18-6@3)
+        SW3-2 SW3-2@1 U7-5 U2-4 J18-5 J18-6 J18-6@1 J18-6@2 J18-6@3 Q2-1)
     )
     (net usbvcc
       (pins C2-1 Q1-3 F1-1)
     )
     (net +5V
       (pins C3-2 C10-1 J6-7 J17-5 J17-2 JP1-1 Q1-2 R3-1 R4-1 U3-4 U3-19 U3-20 U5-2
-        U5-2@1 U5-2@2 U5-2@3 U5-2@4 U2-8)
+        U5-2@1 U5-2@2 U5-2@3 U5-2@4 U2-8 D7-1 JP8-1)
     )
     (net 3v3
       (pins C4-1 U3-17 U2-6)
@@ -1857,7 +1885,7 @@
       (pins U1-2 J2-11)
     )
     (net NEOUT
-      (pins U1-3 J2-1 J2-2)
+      (pins U1-3 J2-1 J2-2 JP7-1)
     )
     (net NENRST
       (pins U1-4 J2-16)
@@ -1910,9 +1938,18 @@
     (net usbvbus
       (pins F1-2 J1-1 J18-1)
     )
+    (net "Net-(D7-Pad2)"
+      (pins D7-2 JP8-2 Q2-3)
+    )
+    (net "Net-(JP7-Pad2)"
+      (pins JP7-2 R15-2)
+    )
+    (net "Net-(Q2-Pad2)"
+      (pins R15-1 Q2-2)
+    )
     (class kicad_default "" +5V 3v3 EECS NECTRLV NEDIS NEGND NENRST NENTRIG
       NEOUT NETHR NEVCC "Net-(C5-Pad2)" "Net-(C7-Pad1)" "Net-(C7-Pad2)" "Net-(D2-Pad2)"
-      "Net-(D3-Pad2)" "Net-(D4-Pad2)" "Net-(D6-Pad1)" "Net-(D6-Pad2)" "Net-(F1-Pad2)"
+      "Net-(D3-Pad2)" "Net-(D4-Pad2)" "Net-(D6-Pad1)" "Net-(D6-Pad2)" "Net-(D7-Pad2)"
       "Net-(J1-Pad2)" "Net-(J1-Pad3)" "Net-(J10-Pad1)" "Net-(J10-Pad2)" "Net-(J10-Pad3)"
       "Net-(J10-Pad4)" "Net-(J11-Pad1)" "Net-(J11-Pad2)" "Net-(J11-Pad3)"
       "Net-(J11-Pad4)" "Net-(J11-Pad5)" "Net-(J11-Pad6)" "Net-(J11-Pad7)"
@@ -1921,17 +1958,17 @@
       "Net-(J13-Pad5)" "Net-(J13-Pad6)" "Net-(J13-Pad7)" "Net-(J13-Pad8)"
       "Net-(J14-Pad3)" "Net-(J14-Pad4)" "Net-(J14-Pad5)" "Net-(J14-Pad6)"
       "Net-(J14-Pad7)" "Net-(J14-Pad8)" "Net-(J15-Pad2)" "Net-(J15-Pad3)"
-      "Net-(J15-Pad4)" "Net-(J16-Pad3)" "Net-(J17-Pad1)" "Net-(J18-Pad4)"
-      "Net-(J3-Pad1)" "Net-(J3-Pad2)" "Net-(J3-Pad3)" "Net-(J3-Pad4)" "Net-(J3-Pad5)"
-      "Net-(J3-Pad6)" "Net-(J3-Pad7)" "Net-(J3-Pad8)" "Net-(J8-Pad1)" "Net-(J8-Pad2)"
-      "Net-(J8-Pad3)" "Net-(J8-Pad4)" "Net-(J8-Pad5)" "Net-(J8-Pad6)" "Net-(J8-Pad7)"
-      "Net-(J8-Pad8)" "Net-(J9-Pad3)" "Net-(J9-Pad4)" "Net-(J9-Pad5)" "Net-(J9-Pad6)"
-      "Net-(J9-Pad7)" "Net-(J9-Pad8)" "Net-(JP4-Pad1)" "Net-(JP5-Pad1)" "Net-(U2-Pad3)"
+      "Net-(J15-Pad4)" "Net-(J16-Pad3)" "Net-(J18-Pad4)" "Net-(J3-Pad1)" "Net-(J3-Pad2)"
+      "Net-(J3-Pad3)" "Net-(J3-Pad4)" "Net-(J3-Pad5)" "Net-(J3-Pad6)" "Net-(J3-Pad7)"
+      "Net-(J3-Pad8)" "Net-(J8-Pad1)" "Net-(J8-Pad2)" "Net-(J8-Pad3)" "Net-(J8-Pad4)"
+      "Net-(J8-Pad5)" "Net-(J8-Pad6)" "Net-(J8-Pad7)" "Net-(J8-Pad8)" "Net-(J9-Pad3)"
+      "Net-(J9-Pad4)" "Net-(J9-Pad5)" "Net-(J9-Pad6)" "Net-(J9-Pad7)" "Net-(J9-Pad8)"
+      "Net-(JP4-Pad1)" "Net-(JP5-Pad1)" "Net-(JP7-Pad2)" "Net-(Q2-Pad2)" "Net-(U2-Pad3)"
       "Net-(U3-Pad10)" "Net-(U3-Pad11)" "Net-(U3-Pad27)" "Net-(U3-Pad28)"
       "Net-(U3-Pad3)" "Net-(U3-Pad9)" "Net-(U7-Pad6)" "Net-(U7-Pad7)" VCC
       ale aref avcc cbus0 cbus1 cbus2 cbus3 cbus4 cmp gate_cmd m8rxd m8txd
-      miso mosi npen nrd nwr pb4 pb5 pwrin rdx reset ring rxd sck scl sda
-      tosc1 tosc2 txd usbvbus usbvcc vin xtal1 xtal2
+      miso mosi npen nrd nwr pb4 pb5 pwrin reset ring rxd sck scl sda tosc1
+      tosc2 txd usbvbus usbvcc vin xtal1 xtal2
       (circuit
         (use_via Via[0-1]_800:400_um)
       )
