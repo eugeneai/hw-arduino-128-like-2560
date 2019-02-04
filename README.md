@@ -10,9 +10,10 @@ The components are:
 - B57164-K 223-J, 22 кОм, 5%, NTC thermistor (not user now in the PCB),
 - 2N3904 N-P-N transistor (not used).
 
-Most of the components wrapped with their pin headers and jumpers.
+Most of the components wrapped with their pin headers and jumpers, allowing students to study micro controllers with even less soldering.
 
-Printed circuit design for Arduino-like board, allowing students to study microcontrollers with less soldering.
+
+Printed circuit design for Arduino Mega v3.0.3-like board based on ATMega-128,-64, which has TQFP-64 package (not TQFP-100). These chips are cheap now when bought at ALIExpress.
 
 __ATTENTION! This PCB Design is not complete, e.g., it is not pin-compatible with Arduino Mega.__
 
