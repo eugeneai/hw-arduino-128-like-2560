@@ -1,4 +1,4 @@
-(pcb /home/eugeneai/projects/hw/ard/arduino.dsn
+(pcb "/home/eugeneai/projects/hard/hw-atmega128-like256/arduino/arduino.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -66,8 +66,8 @@
   (placement
     (component Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder
       (place C1 62230 -123190 front 270 (PN 100n))
-      (place C2 45720 -114300 front 90 (PN "C 100n"))
-      (place C4 71120 -121920 front 90 (PN "C 100n"))
+      (place C2 45720 -114300 front 90 (PN 100n))
+      (place C4 71120 -121920 front 90 (PN 100n))
       (place C9 64770 -130810 front 90 (PN 100n))
       (place C12 83820 -125730 front 0 (PN 22p))
       (place C13 78740 -102870 front 270 (PN "C 100n"))
@@ -82,10 +82,10 @@
       (place R14 73660 -110490 front 90 (PN 1k))
     )
     (component Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder::1
-      (place C3 54855 -135890 front 180 (PN C))
+      (place C3 54855 -135890 front 180 (PN 0.1u))
       (place C5 115570 -109220 front 0 (PN "C 10n"))
       (place C6 120650 -97790 front 0 (PN "C 100n"))
-      (place C7 62230 -105410 front 270 (PN C))
+      (place C7 62230 -105410 front 270 (PN 0.1u))
       (place C11 88900 -127000 front 90 (PN 22p))
       (place C14 53340 -109220 front 0 (PN "C 100n"))
       (place C15 115570 -115570 front 270 (PN " C 100n"))
@@ -146,7 +146,7 @@
       (place JP8 124460 -120650 front 270 (PN RELAY))
     )
     (component "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
-      (place JP3 64770 -114300 front 270 (PN Jumper))
+      (place JP3 64770 -114300 front 270 (PN AVR))
     )
     (component Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical::1
       (place JP4 109220 -100330 front 90 (PN Jumper))
@@ -177,7 +177,7 @@
       (place Y1 85090 -130810 front 180 (PN Crystal))
     )
     (component Fuse:Fuse_2512_6332Metric_Pad1.52x3.35mm_HandSolder
-      (place F1 41910 -116840 front 90 (PN Fuse))
+      (place F1 41910 -116840 front 90 (PN 0.5RST))
     )
     (component "Connector_USB:USB_A_CNCTech_1001-011-01101_Horizontal"
       (place J1 34290 -104140 front 180 (PN USB_A))
