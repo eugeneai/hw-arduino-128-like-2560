@@ -7,6 +7,7 @@ Printed circuit design for Arduino-like board, allowing students to study microc
 ##TODO:
 
 - Move big components on the top of PCB (swap sides).
+- Add an N-P-N transistor in key mode with some components to connect output of 7555, __e.g.__, with a relay.
 - Move silk text to a visible place.
 - Use SMD Capacitors around 5V rectifier.
 
