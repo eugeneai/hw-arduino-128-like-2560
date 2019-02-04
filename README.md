@@ -2,14 +2,24 @@
 
 Printed circuit design for Arduino-like board, allowing students to study microcontrollers with less soldering.
 
-ATTENTION! This PCB Design is not complete, e.g., blocking capacitors are not at their places.
+*ATTENTION! This PCB Design is not complete, e.g., it is not pin-compatible with Arduino Mega.**
 
-TODO: Move big components on the top of PCB (swap sides).
+##TODO:
+
+- Move big components on the top of PCB (swap sides).
+- Move silk text to a visible place.
+- Use SMD Capacitors around 5V rectifier.
 
 PCB made with/by KiCAD and FreeRouting.
+
+## Current PCB layout
+
+![Alt text](./view/arduino-brd.svg)
+<img src="./view/arduino-brd.svg">
+
 
 License - MIT.
 
 Regards,
-Evgeny Cherkashin, Ph.D. 
-Irkutsk 
+Evgeny Cherkashin, Ph.D.
+Irkutsk
