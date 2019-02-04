@@ -1,3 +1,4 @@
 *.bak
 *_pcb-bak
 *cache.lib
+_autosave-*
