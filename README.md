@@ -12,11 +12,13 @@ Printed circuit design for Arduino-like board, allowing students to study microc
 
 PCB made with/by KiCAD and FreeRouting.
 
+## Current scheme
+
+![Scheme in SVG](./view/arduino.svg)
+
 ## Current PCB layout
 
-![Alt text](./view/arduino-brd.svg)
-<img src="./view/arduino-brd.svg">
-
+![Current PCB layout in SVG](./view/arduino-brd.svg)
 
 License - MIT.
 
