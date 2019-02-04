@@ -17,7 +17,7 @@ Printed circuit design for Arduino Mega v3.0.3-like board based on ATMega-128,-6
 
 __ATTENTION! This PCB Design is not complete, e.g., it is not pin-compatible with Arduino Mega.__
 
-##TODO
+## TODO:
 
 - Move big components on the top of PCB (swap sides).
 - Add an N-P-N transistor in key mode with some components to connect output of 7555, *e.g.*, with a relay.
